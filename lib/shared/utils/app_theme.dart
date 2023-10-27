@@ -1,4 +1,5 @@
 import 'package:benjamin_portfolio/shared/utils/app_colors.dart';
+import 'package:benjamin_portfolio/shared/utils/app_font.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -35,7 +36,7 @@ class AppTheme {
   );
 
   static final ThemeData darkTheme = ThemeData(
-    fontFamily: 'Preah',
+    fontFamily: AppFont.dmSansRegular,
     brightness: Brightness.dark,
     primaryColor: AppColors.purple,
     scaffoldBackgroundColor: AppColors.bgColor,
