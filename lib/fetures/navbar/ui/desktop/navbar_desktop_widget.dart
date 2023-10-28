@@ -48,11 +48,6 @@ class NavBarDesktopWidget extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ResumeWidget()));
-                // try {
-                //   html.window.open('https://github.com/obetta1', '_blank');
-                // } catch (e) {
-                //   print(e.toString());
-                // }
               },
             )
           ],
