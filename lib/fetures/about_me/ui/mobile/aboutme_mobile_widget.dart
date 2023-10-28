@@ -5,6 +5,8 @@ import 'package:social_media_flutter/social_media_flutter.dart';
 
 import '../../../../shared/design/constants/app_images.dart';
 import '../../../../shared/utils/app_colors.dart';
+import '../../../../shared/widgets/app_outlined_button.dart';
+import '../../../Resume/ui/resume_widget.dart';
 
 class AboutMeMobileWidget extends StatelessWidget {
   const AboutMeMobileWidget({super.key});
@@ -115,6 +117,17 @@ class AboutMeMobileWidget extends StatelessWidget {
                                   ' who loves providing solutions and sharing his coding journey!')
                         ]),
                   ),
+                  AppOutlinedButton(
+                    textStyle: const TextStyle(
+                        fontFamily: AppFont.dmSansBold, color: Colors.white),
+                    title: 'click  to View CV',
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ResumeWidget()));
+                    },
+                  )
                 ],
               )
             ],
