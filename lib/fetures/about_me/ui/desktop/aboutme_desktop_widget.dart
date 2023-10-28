@@ -1,6 +1,7 @@
 // import 'dart:html' as html;
 
 import 'package:benjamin_portfolio/shared/utils/app_font.dart';
+import 'package:benjamin_portfolio/shared/utils/value-manager.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'package:social_media_flutter/social_media_flutter.dart';
@@ -27,7 +28,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 100),
+              const SizedBox(height: AppPaddingValue.p100),
               Row(
                 children: [
                   CircleAvatar(
@@ -38,7 +39,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
                       backgroundImage: const AssetImage(AppImages.selfImage),
                     ),
                   ),
-                  const SizedBox(width: 100),
+                  const SizedBox(width: AppPaddingValue.p100),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -46,8 +47,8 @@ class AboutMeDesktopWidget extends StatelessWidget {
                         text: TextSpan(
                             style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'Preah',
-                                fontSize: w / 40),
+                                fontFamily: AppFont.dmSansRegular,
+                                fontSize: w / AppPaddingValue.p40),
                             children: [
                               const TextSpan(text: 'I am '),
                               TextSpan(
@@ -55,7 +56,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
                                   style: TextStyle(color: AppColors.purple))
                             ]),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppPaddingValue.p20),
                       const Text(
                         'mission,',
                         style: TextStyle(decoration: TextDecoration.underline),
@@ -66,7 +67,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
                                 color: Colors.white,
                                 height: 1.2,
                                 fontFamily: 'Preah',
-                                fontSize: w / 20,
+                                fontSize: w / AppPaddingValue.p20,
                                 fontWeight: FontWeight.bold),
                             children: [
                               const TextSpan(
@@ -84,7 +85,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
                   )
                 ],
               ),
-              const SizedBox(height: 60),
+              const SizedBox(height: AppSizeValue.s60),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -94,7 +95,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
                         color: Colors.white,
                         height: 1.2,
                         fontFamily: AppFont.dmSansRegular,
-                        fontSize: w / 28),
+                        fontSize: w / AppPaddingValue.p28),
                   ),
                   RichText(
                     text: TextSpan(
@@ -102,7 +103,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
                             color: Colors.white,
                             height: 1.2,
                             fontFamily: AppFont.dmSansRegular,
-                            fontSize: w / 44,
+                            fontSize: w / AppSizeValue.s44,
                             fontWeight: FontWeight.bold),
                         children: const [
                           TextSpan(
@@ -115,7 +116,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
                                   ' who loves providing solutions and sharing my coding journey!')
                         ]),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppPaddingValue.p20),
                   SizedBox(
                     child: Row(
                       children: [

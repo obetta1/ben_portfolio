@@ -1,4 +1,6 @@
 import 'package:benjamin_portfolio/fetures/about_me/ui/about_me_widget.dart';
+import 'package:benjamin_portfolio/fetures/contact_me/ui/contact_me_widget.dart';
+import 'package:benjamin_portfolio/fetures/experience/ui/experience_widget.dart';
 import 'package:benjamin_portfolio/fetures/highlights/ui/highlights_widget.dart';
 import 'package:benjamin_portfolio/fetures/navbar/navbar_widget.dart';
 import 'package:benjamin_portfolio/shared/utils/value-manager.dart';
@@ -27,6 +29,8 @@ class _HomePageState extends State<HomePage> {
               children: [
                 IntroWidget(),
                 HighlightsWidget(),
+                ExperienceWidget(),
+                ContactUsWidget()
               ],
             ),
           )))

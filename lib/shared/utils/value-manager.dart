@@ -42,13 +42,13 @@ class AppSizeValue {
   static const double s10 = 10.0;
   static const double s20 = 20.0;
   static const double s25 = 25.0;
-  static const double s45 = 45.0;
+  static const double s44 = 44.0;
   static const double s33 = 33.0;
   static const double s60 = 60.0;
   static const double s70 = 70.0;
   static const double s90 = 90.0;
   static const double s100 = 100.0;
-  static const double s110 = 110.0;
+  static const double s64 = 64.0;
   static const double s130 = 130.0;
   static const double s140 = 140.0;
   static const double s177 = 177.0;

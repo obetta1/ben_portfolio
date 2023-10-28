@@ -20,14 +20,14 @@ class AboutMeMobileWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const CircleAvatar(
-                radius: 64,
+                radius: AppSizeValue.s64,
                 backgroundColor: Colors.white,
                 child: CircleAvatar(
-                  radius: 60,
+                  radius: AppSizeValue.s60,
                   backgroundImage: AssetImage(AppImages.selfImage),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: AppPaddingValue.p20),
               RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(
