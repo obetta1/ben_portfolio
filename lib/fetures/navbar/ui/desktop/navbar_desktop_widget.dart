@@ -1,8 +1,7 @@
-// import 'dart:html' as html;
-
-import 'package:benjamin_portfolio/fetures/Resume/ui/resume_widget.dart';
+import 'package:benjamin_portfolio/fetures/authentication/screens/login_page.dart';
 import 'package:benjamin_portfolio/shared/utils/app_font.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../shared/utils/app_colors.dart';
 import '../../../../shared/widgets/app_outlined_button.dart';
@@ -44,16 +43,10 @@ class NavBarDesktopWidget extends StatelessWidget {
                   fontFamily: AppFont.dmSansBold, color: Colors.white),
               title: 'Follow me on github',
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ResumeWidget()));
+                Get.to(() => LoginPage());
               },
             )
           ],
-        )
-            // RichText(
-
-            ));
+        )));
   }
 }
