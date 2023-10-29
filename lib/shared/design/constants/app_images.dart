@@ -4,6 +4,13 @@ class AppImages {
   static const String cupImage = 'assets/images/cup_image.png';
   static const String bookmarkImage = 'assets/images/bookmark_image.png';
   static const String selfImage = 'assets/images/self.png';
+  static const String herconomy_app = 'assets/images/herconomy_app.png';
+  static const String evword_pay = 'assets/images/evword_pay.png';
+  static const String evword_app = 'assets/images/evword_app.png';
+  static const String eveword_cart = 'assets/images/eveword_cart.png';
+  static const String fielmax_app = 'assets/images/fielmax_app.png';
+  static const String hotel_voyage = 'assets/images/hotel_voyage.png';
+  static const String cart_app = 'assets/images/cart_app.png';
 
   static const String ben_cv = 'assets/images/ben_cv.png';
 

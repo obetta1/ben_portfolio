@@ -1,12 +1,13 @@
+import 'package:benjamin_portfolio/fetures/authentication/screens/login_page.dart';
 import 'package:benjamin_portfolio/shared/utils/app_font.dart';
 import 'package:benjamin_portfolio/shared/utils/value-manager.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:social_media_flutter/social_media_flutter.dart';
 
 import '../../../../shared/design/constants/app_images.dart';
 import '../../../../shared/utils/app_colors.dart';
 import '../../../../shared/widgets/app_outlined_button.dart';
-import '../../../Resume/ui/resume_widget.dart';
 
 class AboutMeMobileWidget extends StatelessWidget {
   const AboutMeMobileWidget({super.key});
@@ -120,12 +121,13 @@ class AboutMeMobileWidget extends StatelessWidget {
                   AppOutlinedButton(
                     textStyle: const TextStyle(
                         fontFamily: AppFont.dmSansBold, color: Colors.white),
-                    title: 'click  to View CV',
+                    title: 'click  to View Portfolio',
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ResumeWidget()));
+                      Get.to(() => LoginPage());
+                      // Navigator.pushReplacement(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => const LoginWidget()));
                     },
                   )
                 ],
