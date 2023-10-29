@@ -18,10 +18,10 @@ class ContactMeDesktopWidget extends StatelessWidget {
         ),
         const SizedBox(height: AppPaddingValue.p20),
         const Text(
-            "If you are a student, entrepreneur or just want to chat with me, drop me an interesting mail at 👇"),
+            "Students, entrepreneurs, or anyone seeking engaging conversations, feel free to reach out with an intriguing email. I look forward to connecting with you! 👇"),
         const SizedBox(height: 8),
         Text(
-          'akmadan1717@gmail.com',
+          'obettabenjamin44@gmail.com',
           style: TextStyle(color: AppColors.purple),
         ),
         const SizedBox(height: AppPaddingValue.p20),
@@ -50,7 +50,7 @@ class ContactMeDesktopWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Coded by Akshit with 💚 in India'),
+              Text('Developed by Engr. Benjamin obetta. '),
             ],
           ),
         )
