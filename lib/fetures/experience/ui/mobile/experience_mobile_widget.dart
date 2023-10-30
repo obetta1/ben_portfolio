@@ -48,17 +48,9 @@ class ExperienceMobileWidget extends StatelessWidget {
                 Wrap(
                     // mainAxisAlignment: MainAxisAlignment.center,
                     children: List.generate(
-                        12,
+                        8,
                         (index) => techStackCircle(
                             techStackImages.values.toList()[index]))),
-                // Row(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: List.generate(
-                //         6,
-                //         (index) => techStackCircle(techStackImages.values
-                //             .toList()
-                //             .reversed
-                //             .toList()[index])))
               ],
             )
           ],

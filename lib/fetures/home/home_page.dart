@@ -1,3 +1,4 @@
+import 'package:benjamin_portfolio/fetures/Resume/ui/resume_widget.dart';
 import 'package:benjamin_portfolio/fetures/about_me/ui/about_me_widget.dart';
 import 'package:benjamin_portfolio/fetures/contact_me/ui/contact_me_widget.dart';
 import 'package:benjamin_portfolio/fetures/experience/ui/experience_widget.dart';
@@ -31,6 +32,7 @@ class _HomePageState extends State<HomePage> {
                 IntroWidget(),
                 ProductWidget(),
                 ExperienceWidget(),
+                ResumeWidget(),
                 ContactUsWidget()
               ],
             ),

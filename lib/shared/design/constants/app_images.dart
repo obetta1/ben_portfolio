@@ -11,6 +11,8 @@ class AppImages {
   static const String fielmax_app = 'assets/images/fielmax_app.png';
   static const String hotel_voyage = 'assets/images/hotel_voyage.png';
   static const String cart_app = 'assets/images/cart_app.png';
+  static const String scrum_cert = 'assets/images/scrum_cert.png';
+  static const String nysce_cert = 'assets/images/nysce_cert.png';
 
   static const String ben_cv = 'assets/images/ben_cv.png';
 

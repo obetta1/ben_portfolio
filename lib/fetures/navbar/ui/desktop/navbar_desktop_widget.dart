@@ -1,4 +1,4 @@
-import 'package:benjamin_portfolio/fetures/authentication/screens/login_page.dart';
+import 'package:benjamin_portfolio/fetures/authentication/screens/desktop/login_page.dart';
 import 'package:benjamin_portfolio/shared/utils/app_font.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

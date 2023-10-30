@@ -44,7 +44,7 @@ class ContactMeMobileWidget extends StatelessWidget {
         ),
         const Divider(),
         const SizedBox(height: 20),
-        Center(
+        const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

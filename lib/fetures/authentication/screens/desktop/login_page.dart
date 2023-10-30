@@ -1,9 +1,9 @@
 import 'package:benjamin_portfolio/shared/utils/validators.dart';
 import 'package:flutter/material.dart';
 
-import '../../../shared/utils/value-manager.dart';
-import '../../../shared/widgets/app_elevated_button.dart';
-import '../../portfolio/ui/portfolio_widget.dart';
+import '../../../../shared/utils/value-manager.dart';
+import '../../../../shared/widgets/app_elevated_button.dart';
+import '../../../portfolio/ui/portfolio_widget.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -29,6 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             key: loginKey,
             child: Container(
               width: MediaQuery.of(context).size.width / 2,
+              height: MediaQuery.of(context).size.height * 0.7,
               padding: const EdgeInsets.all(32),
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -74,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                       text: "LOGIN",
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
