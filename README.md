@@ -1,17 +1,26 @@
 # benjamin_portfolio
+#Portfolio App
 
-A new Flutter project.
 
-## Getting Started
+Overview
+This is a versatile and feature-rich portfolio app built using Flutter for both web and mobile platforms. The app showcases a collection of projects, experiences, and personal information, making it a powerful tool for presenting your professional profile to potential employers or collaborators.
 
-This project is a starting point for a Flutter application.
+The app leverages several key technologies:
 
-A few resources to get you started if this is your first Flutter project:
+Flutter: The app is developed using the Flutter framework, enabling you to create a single codebase for both web and mobile platforms.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Riverpod: Riverpod is used for state management, providing a robust and predictable way to manage and share application state.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Dio: The Dio HTTP client is utilized for making requests to the Git API, fetching project data, and populating the app with real-time information.
+
+Git API Integration: The app integrates with the GitHub API to dynamically fetch and display your GitHub projects and repositories.
+
+Features
+Responsive Design: The app is designed to be responsive, ensuring a seamless user experience on both web and mobile devices.
+
+Project Showcase: Display your portfolio projects with detailed information, including project name, description, and links to GitHub repositories.
+
+Experience Highlights: Share your professional experiences and technical skills, making it easy for potential employers to learn about your expertise.
+
+Personal Information: Present your personal information, such as name, contact details, and a brief bio.
 # ben_portfolio
