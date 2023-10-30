@@ -23,8 +23,8 @@ class _ProjectsMobileWidgetState extends ConsumerState<ProjectsMobileWidget> {
         ref.watch(projectProvider.notifier).fetch();
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 10),
-      // height: MediaQuery.of(context).size.height,
+      margin: const EdgeInsets.only(bottom: 100),
+      // height: MediaQuery.of(context).size.height - 100,
       child: Stack(
         children: [
           Align(
@@ -47,53 +47,126 @@ class _ProjectsMobileWidgetState extends ConsumerState<ProjectsMobileWidget> {
               children: [
                 const Text(
                   'Past Projects',
-                  style: TextStyle(fontSize: 24),
+                  style: TextStyle(fontSize: 40),
                 ),
-                const SizedBox(height: 20),
-                Wrap(
-                  runSpacing: 8,
-                  spacing: 8,
-                  direction: Axis.horizontal,
-                  children: [
-                    FutureBuilder<List<Project>?>(
-                        future: projects,
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-                            final len = snapshot.data!.length;
-                            debugPrint("lent =====${len}");
-                            return Container(
-                              height: MediaQuery.of(context).size.height,
-                              width: MediaQuery.of(context).size.width,
-                              child: ListView.builder(
-                                  itemCount: len,
-                                  itemBuilder: (context, index) {
-                                    return Column(
-                                      children: [
-                                        highlightContainer(
-                                            context,
-                                            false,
-                                            '${snapshot.data?[index].name}',
-                                            AppImages.bookmarkImage,
-                                            '${snapshot.data?[index].htmlUrl} ',
-                                            'VISIT CHANNEL'),
-                                        SizedBox(
-                                          height: 20,
-                                        )
-                                      ],
-                                    );
-                                  }),
-                            );
-                          }
-                          return Text("empty");
-                        }),
-                  ],
-                )
+                const SizedBox(height: 10),
+                FutureBuilder<List<Project>?>(
+                    future: projects,
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        final len = snapshot.data!.length;
+                        debugPrint("lent =====${len}");
+                        return Container(
+                          height: 500,
+                          width: MediaQuery.of(context).size.width,
+                          child: ListView.builder(
+                            itemCount: len,
+                            itemBuilder: (context, index) {
+                              return Column(
+                                children: [
+                                  highlightContainer(
+                                    context,
+                                    false,
+                                    '${snapshot.data?[index].name}',
+                                    AppImages.bookmarkImage,
+                                    '${snapshot.data?[index].htmlUrl} ',
+                                    'VISIT CHANNEL',
+                                  ),
+                                  const SizedBox(
+                                    height: 20,
+                                  )
+                                ],
+                              );
+                            },
+                          ),
+                        );
+                      }
+                      return Text("empty");
+                    })
               ],
             ),
           )
         ],
       ),
     );
+    //Container(
+    //   margin: const EdgeInsets.only(bottom: 10),
+    //   // height: MediaQuery.of(context).size.height,
+    //   child: Stack(
+    //     children: [
+    //       Align(
+    //         alignment: Alignment.bottomLeft,
+    //         child: Container(
+    //           height: 100,
+    //           width: 100,
+    //           decoration: BoxDecoration(color: Colors.transparent, boxShadow: [
+    //             BoxShadow(
+    //               blurRadius: 200,
+    //               spreadRadius: 200,
+    //               color: AppColors.purple.withOpacity(0.4),
+    //             )
+    //           ]),
+    //         ),
+    //       ),
+    //       Container(
+    //         height: 500,
+    //         child: Column(
+    //           crossAxisAlignment: CrossAxisAlignment.start,
+    //           children: [
+    //             const Text(
+    //               'Past Projects',
+    //               style: TextStyle(fontSize: 24),
+    //             ),
+    //             const SizedBox(height: 20),
+    //             ListView(
+    //               scrollDirection: Axis.horizontal,
+    //               children: [
+    //                 Wrap(
+    //                   runSpacing: 8,
+    //                   spacing: 8,
+    //                   direction: Axis.horizontal,
+    //                   children: [
+    //                     FutureBuilder<List<Project>?>(
+    //                       future: projects,
+    //                       builder: (context, snapshot) {
+    //                         if (snapshot.hasData) {
+    //                           final len = snapshot.data!.length;
+    //                           debugPrint("lent =====${len}");
+    //                           return ListView.builder(
+    //                             scrollDirection: Axis.horizontal,
+    //                             itemCount: len,
+    //                             itemBuilder: (context, index) {
+    //                               return Row(
+    //                                 children: [
+    //                                   highlightContainer(
+    //                                     context,
+    //                                     false,
+    //                                     '${snapshot.data?[index].name}',
+    //                                     AppImages.bookmarkImage,
+    //                                     '${snapshot.data?[index].htmlUrl} ',
+    //                                     'VISIT CHANNEL',
+    //                                   ),
+    //                                   SizedBox(
+    //                                     width: 8,
+    //                                   ),
+    //                                 ],
+    //                               );
+    //                             },
+    //                           );
+    //                         }
+    //                         return Text("empty");
+    //                       },
+    //                     ),
+    //                   ],
+    //                 ),
+    //               ],
+    //             )
+    //           ],
+    //         ),
+    //       )
+    //     ],
+    //   ),
+    // );
   }
 
   Widget highlightContainer(BuildContext context, bool showButton, String topic,

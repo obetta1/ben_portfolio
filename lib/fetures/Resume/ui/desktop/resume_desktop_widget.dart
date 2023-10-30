@@ -33,7 +33,7 @@ class ResumeDesktopWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Mobile App Development Portfolio',
+                  'Certifications',
                   style: TextStyle(fontSize: 40),
                 ),
                 const SizedBox(height: 40),
@@ -43,13 +43,9 @@ class ResumeDesktopWidget extends StatelessWidget {
                   direction: Axis.horizontal,
                   children: [
                     CertificateContainer(
-                        context, AppImages.hotel_voyage, 'degree Certificate'),
+                        context, AppImages.scrum_cert, 'Scrum Certificate'),
                     CertificateContainer(
-                        context, AppImages.hotel_voyage, 'degree Certificate'),
-                    CertificateContainer(
-                        context, AppImages.hotel_voyage, 'degree Certificate'),
-                    CertificateContainer(
-                        context, AppImages.hotel_voyage, 'degree Certificate')
+                        context, AppImages.nysce_cert, 'NYSC Certificate'),
                   ],
                 )
               ],
@@ -66,9 +62,10 @@ class ResumeDesktopWidget extends StatelessWidget {
     imageTile,
   ) {
     double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Container(
       width: w / 2.4,
-      height: 460,
+      height: h,
       padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
       decoration: BoxDecoration(
           color: AppColors.purpleDark.withOpacity(0.5),
@@ -77,8 +74,9 @@ class ResumeDesktopWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           AppImageWidget(
-            imageWidth: 100,
-            imageHeight: 100,
+            imageHeight: h - 150,
+            imageWidth: w / 2.4,
+            imageFit: BoxFit.fill,
             path: imagePath,
           ),
           const SizedBox(width: 20),

@@ -46,7 +46,7 @@ class AppTheme {
       elevation: 0,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      unselectedItemColor: Colors.grey.shade600,
+      unselectedItemColor: AppColors.purple,
       selectedItemColor: Colors.white,
       backgroundColor: Colors.black,
       selectedLabelStyle:

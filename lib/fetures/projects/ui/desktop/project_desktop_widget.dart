@@ -45,48 +45,46 @@ class _ProjectsDesktopWidgetState extends ConsumerState<ProjectsDesktopWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Highlights',
+                  'Past Project',
                   style: TextStyle(fontSize: 40),
                 ),
-                const SizedBox(height: 40),
-                Wrap(
-                  runSpacing: 20,
-                  spacing: 20,
-                  direction: Axis.horizontal,
-                  children: [
-                    FutureBuilder<List<Project>?>(
-                        future: projects,
-                        builder: (context, snapshot) {
-                          if (snapshot.hasData) {
-                            final len = snapshot.data!.length;
-                            debugPrint("lent =====${len}");
-                            return Container(
-                              height: MediaQuery.of(context).size.height,
-                              width: MediaQuery.of(context).size.width,
-                              child: ListView.builder(
-                                  itemCount: len,
-                                  itemBuilder: (context, index) {
-                                    return Column(
-                                      children: [
-                                        highlightContainer(
-                                            context,
-                                            false,
-                                            '${snapshot.data?[index].name}',
-                                            AppImages.bookmarkImage,
-                                            '${snapshot.data?[index].htmlUrl} ',
-                                            'VISIT CHANNEL'),
-                                        const SizedBox(
-                                          height: 20,
-                                        )
-                                      ],
-                                    );
-                                  }),
-                            );
-                          }
-                          return Text("empty");
-                        }),
-                  ],
-                )
+                const SizedBox(height: 10),
+                FutureBuilder<List<Project>?>(
+                    future: projects,
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        final len = snapshot.data!.length;
+                        debugPrint("lent =====${len}");
+                        return Container(
+                          height: 500,
+                          width: MediaQuery.of(context).size.width,
+                          child: GridView.builder(
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 2, childAspectRatio: 1.6),
+                            itemCount: len,
+                            itemBuilder: (context, index) {
+                              return Column(
+                                children: [
+                                  highlightContainer(
+                                    context,
+                                    false,
+                                    '${snapshot.data?[index].name}',
+                                    AppImages.bookmarkImage,
+                                    '${snapshot.data?[index].htmlUrl} ',
+                                    'VISIT CHANNEL',
+                                  ),
+                                  // const SizedBox(
+                                  //   height: 20,
+                                  // )
+                                ],
+                              );
+                            },
+                          ),
+                        );
+                      }
+                      return Text("empty");
+                    })
               ],
             ),
           )
@@ -115,6 +113,7 @@ class _ProjectsDesktopWidgetState extends ConsumerState<ProjectsDesktopWidget> {
           ),
           const SizedBox(width: 20),
           Flexible(
+            flex: 1,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

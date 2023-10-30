@@ -1,5 +1,6 @@
 // import 'dart:html' as html;
 
+import 'package:benjamin_portfolio/shared/design/constants/app_string.dart';
 import 'package:benjamin_portfolio/shared/utils/app_font.dart';
 import 'package:benjamin_portfolio/shared/utils/value-manager.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: w / 30),
       height: MediaQuery.of(context).size.height,
@@ -58,7 +60,7 @@ class AboutMeDesktopWidget extends StatelessWidget {
                       ),
                       const SizedBox(height: AppPaddingValue.p20),
                       const Text(
-                        'mission,',
+                        'Hala!,',
                         style: TextStyle(decoration: TextDecoration.underline),
                       ),
                       RichText(
@@ -79,8 +81,6 @@ class AboutMeDesktopWidget extends StatelessWidget {
                               const TextSpan(text: '...')
                             ]),
                       ),
-                      // const Text(
-                      //     'Because if the cover does not impress you what else can?'),
                     ],
                   )
                 ],
@@ -90,31 +90,14 @@ class AboutMeDesktopWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "I'm a Software Engineer & ",
+                    AppString.self_description,
+                    overflow: TextOverflow.fade,
+                    softWrap: true,
                     style: TextStyle(
                         color: Colors.white,
                         height: 1.2,
                         fontFamily: AppFont.dmSansRegular,
-                        fontSize: w / AppPaddingValue.p28),
-                  ),
-                  RichText(
-                    text: TextSpan(
-                        style: TextStyle(
-                            color: Colors.white,
-                            height: 1.2,
-                            fontFamily: AppFont.dmSansRegular,
-                            fontSize: w / AppSizeValue.s44,
-                            fontWeight: FontWeight.bold),
-                        children: const [
-                          TextSpan(
-                              text: 'a mobile Developer  ',
-                              style: TextStyle(
-                                  backgroundColor: Colors.yellowAccent,
-                                  color: Colors.black)),
-                          TextSpan(
-                              text:
-                                  ' who loves providing solutions and sharing my coding journey!')
-                        ]),
+                        fontSize: h / AppSizeValue.s44),
                   ),
                   const SizedBox(height: AppPaddingValue.p20),
                   SizedBox(

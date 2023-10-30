@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                 ProductWidget(),
                 ExperienceWidget(),
                 ResumeWidget(),
-                ContactUsWidget()
+                ContactUsWidget(),
               ],
             ),
           )))

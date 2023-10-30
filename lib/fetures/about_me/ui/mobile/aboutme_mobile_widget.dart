@@ -1,4 +1,5 @@
-import 'package:benjamin_portfolio/fetures/authentication/screens/login_page.dart';
+import 'package:benjamin_portfolio/fetures/authentication/login_widget.dart';
+import 'package:benjamin_portfolio/shared/design/constants/app_string.dart';
 import 'package:benjamin_portfolio/shared/utils/app_font.dart';
 import 'package:benjamin_portfolio/shared/utils/value-manager.dart';
 import 'package:flutter/material.dart';
@@ -15,13 +16,16 @@ class AboutMeMobileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height,
+      height: 1000,
       child: Stack(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: AppSizeValue.s70,
+              ),
               const CircleAvatar(
                 radius: AppSizeValue.s64,
                 backgroundColor: Colors.white,
@@ -60,74 +64,29 @@ class AboutMeMobileWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: AppPaddingValue.p40),
-              const Text(
-                'Mission,',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    fontSize: AppSizeValue.s14),
-              ),
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                    style: const TextStyle(
-                        color: Colors.white,
-                        height: 1.4,
-                        fontFamily: AppFont.dmSansRegular,
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold),
-                    children: [
-                      const TextSpan(
-                          text: 'Turning Ideas to innovative Digital '),
-                      const TextSpan(text: 'Solution.'),
-                      TextSpan(
-                          text: 'light the Path',
-                          style: TextStyle(color: AppColors.purple)),
-                      const TextSpan(text: '...')
-                    ]),
-              ),
-              const SizedBox(height: AppPaddingValue.p40),
+              const SizedBox(height: AppPaddingValue.p20),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text(
-                    "I'm a Software Engineer & ",
-                    textAlign: TextAlign.center,
+                    AppString.self_description,
+                    textAlign: TextAlign.left,
+                    overflow: TextOverflow.fade,
+                    softWrap: true,
                     style: TextStyle(
                         color: Colors.white,
                         fontFamily: AppFont.dmSansRegular,
                         fontSize: AppSizeValue.s16),
                   ),
-                  RichText(
-                    textAlign: TextAlign.center,
-                    text: const TextSpan(
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: AppFont.dmSansRegular,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold),
-                        children: [
-                          TextSpan(
-                              text: ' a mobile Developer ',
-                              style: TextStyle(
-                                  backgroundColor: Colors.yellowAccent,
-                                  color: Colors.black)),
-                          TextSpan(
-                              text:
-                                  ' who loves providing solutions and sharing his coding journey!')
-                        ]),
+                  SizedBox(
+                    height: 20,
                   ),
                   AppOutlinedButton(
                     textStyle: const TextStyle(
                         fontFamily: AppFont.dmSansBold, color: Colors.white),
                     title: 'click  to View Portfolio',
                     onTap: () {
-                      Get.to(() => LoginPage());
-                      // Navigator.pushReplacement(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => const LoginWidget()));
+                      Get.to(() => LoginWidget());
                     },
                   )
                 ],

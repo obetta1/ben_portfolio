@@ -18,7 +18,6 @@ class _ResumeMobileWidgetState extends State<ResumeMobileWidget> {
     bool isReady = false;
 
     return Container(
-      // height: MediaQuery.of(context).size.height - 100,
       child: Stack(
         children: [
           Align(
@@ -40,7 +39,7 @@ class _ResumeMobileWidgetState extends State<ResumeMobileWidget> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  'Certificates',
+                  'Certifications',
                   style: TextStyle(fontSize: 40),
                 ),
                 const SizedBox(height: 40),
@@ -50,13 +49,9 @@ class _ResumeMobileWidgetState extends State<ResumeMobileWidget> {
                   direction: Axis.horizontal,
                   children: [
                     CertificateContainer(
-                        context, AppImages.hotel_voyage, 'degree Certificate'),
+                        context, AppImages.scrum_cert, 'Scrum Certificate'),
                     CertificateContainer(
-                        context, AppImages.hotel_voyage, 'degree Certificate'),
-                    CertificateContainer(
-                        context, AppImages.hotel_voyage, 'degree Certificate'),
-                    CertificateContainer(
-                        context, AppImages.hotel_voyage, 'degree Certificate')
+                        context, AppImages.nysce_cert, 'NUYSC Certificate'),
                   ],
                 )
               ],
@@ -73,9 +68,10 @@ class _ResumeMobileWidgetState extends State<ResumeMobileWidget> {
     imageTile,
   ) {
     double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height * 0.5;
     return Container(
       width: w,
-      height: 369,
+      height: h,
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
       decoration: BoxDecoration(
           color: AppColors.purpleDark.withOpacity(0.5),
@@ -84,9 +80,11 @@ class _ResumeMobileWidgetState extends State<ResumeMobileWidget> {
         mainAxisSize: MainAxisSize.max,
         children: [
           AppImageWidget(
+            imageHeight: h - 50,
+            imageWidth: w,
+            imageFit: BoxFit.fill,
             path: imagePath,
           ),
-          const SizedBox(width: 5),
           Text(
             imageTile,
             style: const TextStyle(
