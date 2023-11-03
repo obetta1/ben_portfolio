@@ -7,6 +7,7 @@ void main() {
     String? result = Validators.validateName("Benjamin");
     expect(result, null);
   });
+
   test('test for incorrect input', () {
     ///this function returns error if the length of imputed string is les than 3
     String? result = Validators.validateName("Be");
